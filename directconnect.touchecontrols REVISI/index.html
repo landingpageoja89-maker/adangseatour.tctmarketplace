@@ -1,0 +1,570 @@
+<!doctype html>
+<html amp lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <title>OJA89 – Solusi Pencahayaan Komersial & DirectConnect</title>
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="description"
+        content="OJA89 hadir sebagai solusi terpercaya pencahayaan komersial. Akses untuk kelola lampu jarak jauh lebih mudah, cepat, dan profesional. Hubungi kami sekarang!">
+    <link href="https://snapy.photo/OJA89/favicon-oja89.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="canonical" href="https://directconnect.touchecontrols.com/">
+    <link rel="alternate" href="https://directconnect.touchecontrols.com/" hreflang="id" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+
+    <style amp-custom>
+        :root {
+            /* === PERUBAHAN WARNA DI SINI === */
+            /* Mengubah dasar hitam/gelap menjadi merah tua/maroon agar kilauan merah terlihat */
+            --maroon: #2b0000; /* Merah sangat tua untuk background atas */
+            --maroon-deep: #1a0000; /* Merah hampir hitam untuk background bawah */
+            
+            /* Mengubah warna aksen emas menjadi merah menyala/putih kemerahan untuk efek kilau */
+            --gold: #ffcccc; /* Merah sangat muda (hampir putih) untuk teks neon */
+            --gold-deep: #ff3333; /* Merah menyala untuk variasi */
+            
+            /* Warna teks utama dan icon */
+            --text: #ffe0e0; /* Putih kemerahan pudar */
+            --ink: #ffffff; /* Putih bersih */
+            
+            /* Mengubah warna garis/border menjadi merah menyala */
+            --line: rgba(255, 30, 30, 0.9); /* Merah terang transparan */
+            
+            /* Radius tetap sama */
+            --radius: 18px;
+            /* ============================== */
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            color: var(--text);
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            /* Background gradient sekarang bernuansa merah tua */
+            background:
+                radial-gradient(120% 90% at 10% -10%, rgba(252, 252, 252, 0.74), transparent 46%),
+                radial-gradient(70% 60% at 100% 0%, rgba(133, 7, 7, 0.568), transparent 50%), /* Mengubah biru menjadi merah */
+                linear-gradient(180deg, var(--maroon), var(--maroon-deep));
+        }
+
+        /* ===== WRAPPER FULL SCREEN ===== */
+        .wrap {
+            min-height: 100svh;
+            /* viewport yang stabil untuk mobile */
+            padding: max(12px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) max(14px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+            display: grid;
+            place-items: center;
+        }
+
+        /* ===== CARD UTAMA (fluid width) ===== */
+        .card {
+            width: clamp(300px, 92vw, 640px);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: clamp(10px, 1.8vmin, 16px);
+            background:
+                radial-gradient(140% 120% at 0% 0%, rgba(189, 189, 189, 0.664), transparent 40%),
+                linear-gradient(to top, #000, #1a0000, #000, #1a0000, #000); /* Sedikit sentuhan merah tua di bkg kartu */
+            box-shadow:
+                inset 0 0 0 1px rgba(255, 255, 255, .04),
+                0 16px 34px rgba(0, 0, 0, .55),
+                0 0 28px rgba(253, 67, 67, .15); /* Mengubah shadow ungu menjadi merah */
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            border-radius: var(--radius);
+            padding: 1px;
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: glow 6s linear infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                filter: hue-rotate(0) brightness(1)
+            }
+
+            50% {
+                filter: hue-rotate(-10deg) brightness(1.08)
+            }
+
+            100% {
+                filter: hue-rotate(0) brightness(1)
+            }
+        }
+
+        /* ===== HEADER LOGO ===== */
+        .brand {
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px dashed rgba(255, 30, 30, 0.28); /* Mengubah warna dash menjadi merah */
+        }
+
+        .brand-name {
+            font-weight: 800;
+            letter-spacing: .3px;
+            font-size: clamp(12px, 2.6vmin, 16px)
+        }
+
+        .brand-pill {
+            margin-left: auto;
+            font-size: clamp(10px, 2vmin, 12px);
+            color: #ffffff; /* Mengubah teks pill menjadi putih agar kontras */
+            font-weight: 800;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 124, 124, 0.7); /* Mengubah border pill jadi merah muda */
+            /* Mengubah gradient pill menjadi variasi merah menyala */
+            background: linear-gradient(to top, #7c0000, #f90000, #801111, #e64c4c, #751a1a);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25);
+        }
+
+        /* ===== BANNER 500×500 (auto-scale) ===== */
+        .banner-wrap {
+            position: relative;
+            margin: 12px auto 0;
+            /* Tetap rasio 1:1, tapi skala mengikuti lebar kartu & tinggi layar */
+            max-width: clamp(260px, min(84vw, 70vh), 500px);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02));
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .04);
+        }
+
+        .banner-wrap::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(70deg, transparent 46%, rgba(255, 255, 255, .16) 50%, transparent 54%);
+            mix-blend-mode: screen;
+            filter: blur(6px);
+            transform: translateX(-60%);
+            animation: scan 4.8s linear infinite;
+        }
+
+        @keyframes scan {
+            to {
+                transform: translateX(60%)
+            }
+        }
+
+        /* ===== CTA BUTTONS ===== */
+        .cta {
+            display: grid;
+            gap: 10px;
+            margin-top: 12px;
+            grid-template-columns: 1fr 1fr
+        }
+
+        .btn {
+            --shine: rgba(255, 255, 255, .38);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            user-select: none;
+            font-weight: 800;
+            letter-spacing: .3px;
+            font-size: clamp(14px, 2.6vmin, 18px);
+            padding: clamp(11px, 2.2vmin, 14px) 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(253, 67, 67, 0.55); /* Mengubah border btn jadi merah */
+            box-shadow: 0 12px 26px rgba(0, 0, 0, .5), 0 0 18px rgba(253, 67, 67, 0.2); /* Mengubah glow jadi merah */
+            position: relative;
+            overflow: hidden;
+            color: var(--ink);
+            transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
+        }
+
+        .btn::after {
+            content: "";
+            position: absolute;
+            inset: -160% -40%;
+            background: linear-gradient(75deg, transparent 46%, var(--shine) 50%, transparent 54%);
+            transform: translateX(-60%);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            filter: saturate(1.06)
+        }
+
+        .btn:hover::after {
+            transition: transform .9s ease;
+            transform: translateX(60%)
+        }
+
+        .btn-login {
+            /* Gradient tombol diubah menjadi nuansa merah metalik/abu gelap */
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, .10), transparent 20%),
+                linear-gradient(to top, #500000, #300000, #260000, #1a0000, #100000);
+            color: var(--ink);
+        }
+
+        .btn-daftar {
+            /* Gradient tombol diubah menjadi nuansa merah metalik/abu gelap */
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, .08), transparent 20%),
+                linear-gradient(to top, #600000, #400000, #330000, #260000, #1a0000);
+            color: #fff;
+            border-color: rgba(253, 67, 67, 0.4); /* Mengubah border jadi merah muda */
+        }
+
+        /* ===== TICKER ===== */
+        /* ===== TICKER (FIX CLIPPED TEXT + RESPONSIVE) ===== */
+        .ticker {
+            --h: clamp(32px, 4.8vmin, 40px);
+            /* tinggi lintasan adaptif */
+            height: var(--h);
+            overflow: hidden;
+            position: relative;
+            margin-top: 10px;
+            border-radius: 12px;
+            border: 1px solid var(--line);
+            background:
+                radial-gradient(80% 120% at 0% 50%, rgba(253, 67, 67, 0.15), transparent 60%), /* Mengubah glow ticker jadi merah */
+                linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02));
+            -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+        }
+
+        /* pusatkan vertikal semua konten di dalam track */
+        .ticker-track {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: max-content;
+            animation: tmove 34s linear infinite;
+        }
+
+        .ticker:hover .ticker-track {
+            animation-play-state: paused;
+        }
+
+        /* jangan pakai line-height tetap; center pakai flex + tinggi var(--h) */
+        .ticker-line {
+            display: flex;
+            align-items: center;
+            height: var(--h);
+            white-space: nowrap;
+            padding: 0 16px;
+            font-weight: 600;
+            font-size: clamp(12px, 2.3vmin, 14px);
+            line-height: 1;
+            /* <— ini kuncinya */
+            letter-spacing: .2px;
+        }
+
+        .neon {
+            color: var(--gold); /* Sekarang warna putih kemerahan */
+            /* Mengubah glow neon menjadi merah menyala */
+            text-shadow: 0 0 6px rgba(255, 30, 30, 0.9), 0 0 14px rgba(255, 30, 30, 0.55);
+        }
+
+        .sep {
+            opacity: .45;
+            margin: 0 14px;
+        }
+
+        @keyframes tmove {
+            from {
+                transform: translateX(0)
+            }
+
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
+        /* HP kecil  cukup kecilkan tinggi, tanpa ubah line-height */
+        @media (max-width:560px) {
+            .ticker {
+                --h: 30px;
+            }
+        }
+
+        /* ===== MINI METERS (auto-fit) ===== */
+        .meters {
+            display: grid;
+            gap: 10px;
+            margin-top: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .meter {
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 10px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02));
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .04);
+        }
+
+        .meter-label {
+            font-size: clamp(11px, 2.1vmin, 13px);
+            opacity: .9;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between
+        }
+
+        .meter-bar {
+            height: 10px;
+            border-radius: 999px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 30, 30, 0.28) /* Mengubah border bar jadi merah */
+        }
+
+        .fill {
+            height: 100%;
+            /* Mengubah gradient isi bar menjadi variasi merah berkilau (merah tua ke putih kemerahan) */
+            background: linear-gradient(90deg, #a00000, #ffcccc, #800000);
+            box-shadow: 0 0 12px rgba(255, 30, 30, 0.5) /* Mengubah glow bar jadi merah */
+        }
+
+        .fill.t1 {
+            width: 86%;
+            animation: pulseA 4.5s ease-in-out infinite
+        }
+
+        .fill.t2 {
+            width: 92%;
+            animation: pulseB 5.2s ease-in-out infinite
+        }
+
+        @keyframes pulseA {
+            0% {
+                width: 78%
+            }
+
+            50% {
+                width: 90%
+            }
+
+            100% {
+                width: 82%
+            }
+        }
+
+        @keyframes pulseB {
+            0% {
+                width: 86%
+            }
+
+            50% {
+                width: 96%
+            }
+
+            100% {
+                width: 88%
+            }
+        }
+
+        /* ===== RESPONSIVE TUNING ===== */
+        @media (max-width:560px) {
+            .cta {
+                grid-template-columns: 1fr
+            }
+
+            .btn {
+                font-size: clamp(15px, 3.4vmin, 18px)
+            }
+
+            .ticker {
+                height: 30px;
+                line-height: 30px
+            }
+
+            .ticker-line {
+                line-height: 30px
+            }
+        }
+            .kata-penutup{
+            display:block;
+            width:fit-content;
+            margin:12px auto;
+            padding:6px 14px;
+            text-align:center;
+            border:1px solid #f0c75e;
+            border-radius:10px;
+            font-size:12px;
+            font-weight:600;
+            color:#fff6d5;
+            background:linear-gradient(135deg,#5c0f18,#7b1220);
+            box-shadow:0 0 8px rgba(240,199,94,0.4);
+        }
+        .kata-penutup a{
+            color:#f0c75e;
+            text-decoration:none;
+            font-weight:700;
+        }
+
+        .kata-penutup a:hover{
+            text-decoration:underline;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrap">
+        <section class="card" aria-label="OJA89">
+            <!-- LOGO KECIL -->
+            <div class="brand" style="text-align: center;">
+            <a href="https://directconnect.touchecontrols.com/" target="_blank" rel="noopener noreferrer">
+                <amp-img 
+                    src="https://imgsaya.online//me/4gQAF9Y7cN.gif"
+                    width="200"
+                    height="100"
+                    layout="fixed"
+                    alt="OJA89">
+                </amp-img>
+                </a>
+                </div>
+            <!-- BANNER 500500 (responsive) -->
+            <div class="banner-wrap" aria-label="OJA89" style="text-align:center;">
+                <a href="https://snapylink.me/oja89" target="_blank" rel="noopener noreferrer">
+                    <amp-img 
+                        src="https://directconnect.touchecontrols.com/img/banner-oja89.png"
+                        width="1024"
+                        height="1024"
+                        layout="responsive"
+                        alt="OJA89">
+                    </amp-img>
+                </a>
+            </div>
+            <p style="text-align: center;"><span class="brand-name">OJA89 – Solusi Pencahayaan Komersial & DirectConnect</span></p>
+
+            <!-- CTA -->
+            <div class="cta" role="group" aria-label="Aksi utama">
+                <a class="btn btn-login" href="https://snapylink.me/oja89" target="_blank" rel="noopener nofollow"
+                    aria-label="OJA89">LOGIN</a>
+                <a class="btn btn-daftar" href="https://snapylink.me/oja89" target="_blank" rel="noopener nofollow"
+                    aria-label="OJA89">DAFTAR</a>
+            </div>
+
+            <!-- TICKER -->
+            <div class="ticker" aria-label="Info berjalan">
+                <div class="ticker-track">
+                    <p class="ticker-line"><span class="neon">Situs Resmi Terpercaya</span><span
+                            class="sep"></span> Proses Cepat &amp; Aman <span class="sep">•</span> RTP Tinggi
+                        <span class="sep">•</span> Mudah Menang <span class="sep">•</span> Promo & Bonus Menarik
+                    </p>
+                </div>
+            </div>
+
+            <!-- MINI METERS -->
+            <div class="meters" aria-label="Statistik hidup">
+                <div class="meter">
+                    <div class="meter-label"><span>Traffic Jackpot</span><span>High</span></div>
+                    <div class="meter-bar">
+                        <div class="fill t1"></div>
+                    </div>
+                </div>
+                <div class="meter">
+                    <div class="meter-label"><span>Maxwin Statistic</span><span>Very High</span></div>
+                    <div class="meter-bar">
+                        <div class="fill t2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kata-penutup">
+                Powered by <a href="https://directconnect.touchecontrols.com/" target="_blank" rel="noopener noreferrer">OJA89</a> • Seo Vi
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
